@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 
 app.get("/", (req, res) => {
-  res.send("hello I am root");
+  res.send("Hi Sonali,How are you doing? 😊");
 });
 
 app.listen(8080, () => {
