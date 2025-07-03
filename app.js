@@ -42,5 +42,5 @@ app.get("/testListing", async (req, res) => {
 
 // Server listening
 app.listen(8080, () => {
-  console.log("🚀 Server is running on port 8080");
+  console.log("🚀 Server is running on port 8080")
 });
