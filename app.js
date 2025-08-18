@@ -22,6 +22,9 @@ async function main() {
   mongoose.connection.on("error", (err) => {
     console.error("❌ MongoDB connection error:", err);
   }); 
+  mongoose.connection.on("disconnected", () => {
+    console.log("❌ MongoDB disconnected");
+  });
 }
 
 app.engine('ejs', ejsMate);
