@@ -17,7 +17,11 @@ main()
 
 async function main() {
   await mongoose.connect(MONGO_URL);
-
+//   console.log("Connected to MongoDB");
+  mongoose.set("strictQuery", true); // Optional: Set strict query mode
+  mongoose.connection.on("error", (err) => {
+    console.error("❌ MongoDB connection error:", err);
+  }); 
 }
 
 app.engine('ejs', ejsMate);
