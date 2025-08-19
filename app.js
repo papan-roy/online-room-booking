@@ -32,7 +32,7 @@ app.engine('ejs', ejsMate);
 // Test home route
 app.get("/", (req, res) => {
   res.send("successfully");
-});
+}); // test route
 
 // Sample listing creation route
 app.get("/testListing", async (req, res) => {
