@@ -2,7 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Listing = require("./models/listing.js");
-const ejMate = require ("ejs-mate");
+const ejsMate = require("ejs-mate");
 
 const app = express();
 const MONGO_URL = "mongodb://127.0.0.1:27017/test";
