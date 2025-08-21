@@ -44,6 +44,12 @@ app.get("/testListing", async (req, res) => {
     price: 1200,
     location: "Calangute, Goa",
     country: "India",
+    images: [
+      "https://example.com/image1.jpg",
+      "https://example.com/image2.jpg",
+      "https://example.com/image3.jpg",
+      // Add more image URLs here
+    ],
   });
 
   await samplelisting.save();
