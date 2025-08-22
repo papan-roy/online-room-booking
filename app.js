@@ -57,7 +57,21 @@ app.get("/testListing", async (req, res) => {
   res.send("✅ Listing saved successfully");
 });
 
+// Fetch listings from Express backend
+useEffect(() => {
+  fetch('http://localhost:8080/testListing')
+    .then(res => res.text())
+    .then(data => console.log(data));
+}, []);
+
 // Server listening
 app.listen(8080, () => {
   console.log("🚀 Server is running on port 8080");
 });
+
+// package.json
+{
+  // ...
+  "proxy": "http://localhost:8080",
+  // ...
+}
